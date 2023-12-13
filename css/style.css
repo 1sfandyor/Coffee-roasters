@@ -35,7 +35,7 @@
   --brown: #C99B67;
   --green: #086752;
   --text-color: #333;
-  
+
 }
 
 html{
@@ -83,6 +83,75 @@ img{
   flex-grow: 1;
 }
 
+
+/* SITE HEADER */
+.header-hero-wrapper {
+  background-image: url("../img/hero-header-bg.jpg");
+}
+
+.header {
+  padding: 40px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.site-header-logo-link{
+  display: flex;
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.site-header-logo-link:hover{
+  opacity: 0.8;
+}
+
+.site-header-logo-link:active{
+  opacity: 0.6;
+}
+
+.site-header-logo-img{
+  width: 235px;
+  height: 24px;
+}
+
+
+.sitenav-list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sitenav-item:not(:last-child) {
+  margin-right: 40px;
+}
+
+
+.sitenav-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+
+.sitenav-link:hover {
+  color: var(--green);
+}
+
+.sitenav-link:active {
+  opacity: 0.6;
+}
+
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
 only screen and (   min--moz-device-pixel-ratio: 2),
@@ -90,5 +159,9 @@ only screen and (     -o-min-device-pixel-ratio: 2/1),
 only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) { 
+  .header-hero-wrapper {
+    background-image: url("../img/hero-header-bg.jpg");
+  }
+
 
 }
