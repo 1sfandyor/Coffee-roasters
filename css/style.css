@@ -99,10 +99,11 @@ img{
 }
 
 .button-brown {
-  display: inline-block;
+  display: inline-flex;
   --green: var(--brown);
   color: #fff;
   background-color: var(--brown);
+  margin-bottom: 45px;
 }
 
 
@@ -310,7 +311,7 @@ img{
   background-image: url("../img/features-bg.jpg");
   background-repeat: no-repeat;
   background-size: 100% 703px;
-  padding: 50px 30px;
+  padding: 50px 30px 0;
 }
 
 .index-features-heading {
@@ -381,6 +382,7 @@ img{
 .how-it-works-inner {
   background-image: url("../img/how-it-work-bg.jpg");
   background-size: 100% 826px;
+  height: 826px;
   background-repeat: no-repeat;
   padding: 50px 30px;
   text-align: center;
@@ -404,6 +406,7 @@ img{
   list-style: none;
   margin-left: -20px;
   margin-bottom: 60px;
+  text-align: start;
   counter-reset: how-it-works;
 }
 
@@ -412,9 +415,7 @@ img{
   flex-direction: column;
   width: calc( 100% / 3 - 20px);
   margin-left: 20px;
-  text-align: start;
   counter-increment: how-it-works;
-  height: 100%;
 }
 
 
@@ -466,6 +467,86 @@ img{
 }
 
 
+/* SITEFOOTER */
+.site-footer {
+  background-image: url("../img/site-footer-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: var(--brown);
+  padding: 68px 30px;
+}
+
+.site-footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-footer-logo-link {
+  display: flex;
+}
+
+.site-footer-logo-link:hover {
+  opacity: 0.8;
+}
+
+
+.site-footer-logo-link:active {
+  opacity: 0.6;
+}
+
+.site-footer-logo-img {
+  width: 235px;
+  height: 24px;
+  object-fit: contain;
+  display: flex;
+}
+
+.site-footer-medium-font {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.sitenav-link:hover {
+  color: var(--green);
+}
+
+
+.sitenav-link:active {
+  opacity: 0.6;
+}
+
+.site-footers-social-list {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-footers-social-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.site-footers-social-link {
+  display: flex;
+  color: #333;
+}
+
+.site-footers-social-link:hover {
+  color: var(--green);
+}
+
+.site-footers-social-link:active {
+  opacity: 0.6;
+}
+
+.site-footers-social-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2),
@@ -490,5 +571,9 @@ only screen and (                min-resolution: 2dppx) {
   .how-it-works-inner {
     background-image: url("../img/how-it-work-bg@2x.jpg");
 }
+
+  .site-footer {
+    background-image: url("../img/site-footer-bg@2x.jpg")
+  }
 
 }
