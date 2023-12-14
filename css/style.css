@@ -303,8 +303,7 @@ img{
 .index-features-inner{
   background-image: url("../img/features-bg.jpg");
   background-repeat: no-repeat;
-  width: 100%;
-  height: 703px;
+  background-size: 100% 703px;
   padding: 50px 30px;
 }
 
