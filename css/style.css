@@ -67,6 +67,7 @@ body{
   font-family: var(--font-family);
   font-weight: 400;
   height: 100%;
+  overflow-x: hidden;
 }
 
 img{
@@ -189,6 +190,7 @@ img{
 .hero-container {
   display: flex;
   padding: 0;
+  align-items: flex-start;
 }
 
 .hero-content {
@@ -220,14 +222,29 @@ img{
   margin-bottom: 34px;
 }
 
+.hero-img-badge-wrapper{
+  position: relative;
+  width: 100%;
+  max-width: 710px;
+}
+
 .hero-img{
+  display: block;
   width: 710px;
   height: 596px;
 }
 
-
 .hero-img-index{
   height: 696px;
+}
+
+.hero-badge{
+  position: absolute;
+  left: -80px;
+  top: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 
@@ -241,11 +258,31 @@ img{
 
 /* INDEX OUR COLLECTION */
 .index-collecion-inner {
+  position: relative;
   background-color: var(--light-gray);
   background-image: url("../img/our-collection-bg.jpg");
   padding: 50px 143px;
   margin-bottom: 20px;
 }
+
+.leaves-left {
+  position: absolute;
+  top: 0;
+  left: -170px;
+}
+
+.leaves-left-light {
+  position: absolute;
+  left: -194px;
+  bottom: 170px;
+}
+
+.leaves-right {
+  position: absolute;
+  right: -220px;
+  bottom: 550px;
+}
+
 
 .index-collction-heading {
   color: #000;
@@ -345,8 +382,15 @@ img{
 }
 
 .index-features-item {
+  position: relative;
   width: calc(100% /3 - 20px);
   margin-left: 20px;
+}
+
+.butFirst{
+  position: absolute;
+  left: -42px;
+  top: -44px;
 }
 
 .index-features-img {
@@ -355,7 +399,6 @@ img{
   object-fit: cover;
   flex-shrink: 0;
   margin-bottom: 28px;
-
 }
 
 .index-features-title {
@@ -380,12 +423,23 @@ img{
 
 /* HOW IT WORKS */
 .how-it-works-inner {
+  position: relative;
   background-image: url("../img/how-it-work-bg.jpg");
   background-size: 100% 826px;
   height: 826px;
   background-repeat: no-repeat;
   padding: 50px 30px;
   text-align: center;
+}
+
+.butFirstSticker{
+  position: absolute;
+  top: 55px;
+  transform: rotateZ(15deg);
+  right: 68px;
+  width: 192px;
+  height: 130px;
+  object-fit: contain;
 }
 
 .how-it-works-heading {
@@ -411,6 +465,7 @@ img{
 }
 
 .how-it-works-item{
+  position: relative;
   display: flex;
   flex-direction: column;
   width: calc( 100% / 3 - 20px);
@@ -446,6 +501,19 @@ img{
   margin-bottom: 20px;
   background-color: var(--light-gray);
 }
+
+.how-it-works-item:not(:last-child):after {
+  position: absolute;
+  right: 10px;
+  top: 25px;
+  content: "";
+  width: 333px;
+  height: 3px;
+  background-image: url("../img/line.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
 
 
 .how-it-works-step-title {
